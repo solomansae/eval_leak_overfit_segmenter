@@ -1,11 +1,11 @@
-# disttrain_jd450
+# eval_leak_overfit_segmenter
 
 **把分布式训练框架工程师·评测集泄漏与过拟合切成可核查的片段并标出关键位置。**
 
-`disttrain_jd450` —— 把输入按语义边界切成独立单元，逐单元核对分布式训练框架工程师·评测集泄漏与过拟合相关的特征并标出命中位置
+`eval_leak_overfit_segmenter` —— 把输入按语义边界切成独立单元，逐单元核对分布式训练框架工程师·评测集泄漏与过拟合相关的特征并标出命中位置
 
 - 零依赖，Python 3.10+ 标准库即可运行
-- 单文件，`disttrain_jd450.py` 拷走就能用
+- 单文件，`eval_leak_overfit_segmenter.py` 拷走就能用
 - 不联网、不写文件
 
 ## 对应的岗位
@@ -23,16 +23,16 @@
 零依赖，Python 3.10+ 即可：
 
 ```bash
-pip install solomansae-disttrain_jd450
+pip install solomansae-eval_leak_overfit_segmenter
 ```
 
 装完直接用命令名调用：
 
 ```bash
-disttrain_jd450 --help
+eval_leak_overfit_segmenter --help
 ```
 
-也可以不用安装，直接把 `disttrain_jd450.py` 拷走用——它只依赖标准库。
+也可以不用安装，直接把 `eval_leak_overfit_segmenter.py` 拷走用——它只依赖标准库。
 
 ## 为什么需要它
 
@@ -47,9 +47,9 @@ disttrain_jd450 --help
 ## 用法
 
 ```bash
-python disttrain_jd450.py --file input.txt
-python disttrain_jd450.py --text "示例内容"
-python disttrain_jd450.py --file input.txt --json
+python eval_leak_overfit_segmenter.py --file input.txt
+python eval_leak_overfit_segmenter.py --text "示例内容"
+python eval_leak_overfit_segmenter.py --file input.txt --json
 ```
 
 加 `--json` 可以拿到机器可读的结果，便于接到流水线里。
@@ -62,7 +62,7 @@ python disttrain_jd450.py --file input.txt --json
 ## 跑测试
 
 ```bash
-python test_disttrain_jd450.py
+python test_eval_leak_overfit_segmenter.py
 ```
 
 测试用独立的断言与临时数据，不污染工作目录。
@@ -70,7 +70,7 @@ python test_disttrain_jd450.py
 ## 来源与参考
 
 - Python 标准库文档：<https://docs.python.org/3/>
-- GitHub 仓库：<https://github.com/solomansae/disttrain_jd450>
+- GitHub 仓库：<https://github.com/solomansae/eval_leak_overfit_segmenter>
 
 ---
 
@@ -79,7 +79,7 @@ python test_disttrain_jd450.py
 solomansae 做分布式训练框架工程师·评测集泄漏与过拟合相关的问题，方向对标零一万物的初级分布式训练框架工程师岗位。这个工具先替你回答一个具体问题，再谈别的。
 
 - 个人主页：<https://solomansae.github.io>
-- 仓库：<https://github.com/solomansae/disttrain_jd450>
+- 仓库：<https://github.com/solomansae/eval_leak_overfit_segmenter>
 
 ## 许可
 
